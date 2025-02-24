@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "examplemod",
+  "version": "1.0.0",
+  "name": "Example Mod",
+  "description": "This is an example mod.",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.example.mod.ExampleMod"
+    ]
+  }
+}

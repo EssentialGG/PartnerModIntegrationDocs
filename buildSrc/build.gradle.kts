@@ -1,0 +1,13 @@
+repositories {
+    gradlePluginPortal()
+    mavenCentral()
+    maven("https://maven.fabricmc.net")
+    maven("https://maven.architectury.dev/")
+    maven("https://repo.essential.gg/public")
+    maven("https://maven.minecraftforge.net")
+}
+
+dependencies {
+    implementation("gg.essential:essential-gradle-toolkit:0.6.5")
+    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.23")
+}
