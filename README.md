@@ -88,9 +88,10 @@ The following highlights the important sections (using the Kotlin buildscript, i
 refer to the respective example).
 
 ```kotlin
-// Apply the shadow plugin
 plugins {
-    id("com.gradleup.shadow") version "8.3.5"
+    // Load the shadow plugin.
+    // We don't need to apply it since we don't want the default shadowJar task.
+    id("com.gradleup.shadow") version "8.3.5" apply false
 }
 
 repositories {
@@ -154,7 +155,9 @@ refer to the respective example).
 ```kotlin
 // Apply the shadow plugin
 plugins {
-    id("com.gradleup.shadow") version "8.3.5"
+    // Load the shadow plugin.
+    // We don't need to apply it since we don't want the default shadowJar task.
+    id("com.gradleup.shadow") version "8.3.5" apply false
 }
 
 repositories {

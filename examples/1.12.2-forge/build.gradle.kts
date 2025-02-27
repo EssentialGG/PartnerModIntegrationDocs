@@ -1,7 +1,9 @@
 plugins {
     id("gg.essential.loom")
     id("gg.essential.defaults")
-    id("com.gradleup.shadow") version "8.3.5"
+    // Load the shadow plugin.
+    // We don't need to apply it since we don't want the default shadowJar task.
+    id("com.gradleup.shadow") version "8.3.5" apply false
 }
 
 version = "1.0.0"
