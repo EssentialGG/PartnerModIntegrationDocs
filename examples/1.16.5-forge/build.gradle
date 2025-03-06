@@ -9,32 +9,32 @@ plugins {
 version = '1.0.0'
 java.toolchain.languageVersion.set(JavaLanguageVersion.of(8))
 
-var essentialAdPackage = 'com.example.mod.essentialad'
+var essentialPartnerModPackage = 'com.example.mod.essentialpartnermod'
 
 tasks.jar {
     manifest.attributes(
-        // The main entry point of the Essential Ad mod are its mixins.
+        // The main entry point of the Essential Partner mod are its mixins.
         // Note that you may have to re-declare your own mixin configs here too depending on your build system.
-        'MixinConfigs': "${essentialAdPackage.replace('.', '/')}/mixins.json,mixins.examplemod.json",
+        'MixinConfigs': "${essentialPartnerModPackage.replace('.', '/')}/mixins.json,mixins.examplemod.json",
     )
 }
 
-var essentialAdDep = 'gg.essential:ad-1.16.5-forge:1.0.0'
+var essentialPartnerModDep = 'gg.essential:partner-mod-integration-1.16.5-forge:1.0.0'
 
-tasks.register('relocatedEssentialAdJar', com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar) {
+tasks.register('relocatedEssentialPartnerModJar', com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar) {
     destinationDirectory.set(layout.buildDirectory.dir('devlibs'))
-    archiveFileName.set('essentialad.jar')
-    inputs.property('essentialAdPackage', essentialAdPackage)
-    var configuration = project.configurations.detachedConfiguration(project.dependencies.create(essentialAdDep))
+    archiveFileName.set('essentialpartner.jar')
+    inputs.property('essentialPartnerModPackage', essentialPartnerModPackage)
+    var configuration = project.configurations.detachedConfiguration(project.dependencies.create(essentialPartnerModDep))
     dependsOn(configuration)
     from({ configuration.collect { zipTree(it) } })
-    exclude('mcmod.info', 'META-INF/mods.toml', 'gg/essential/ad/EssentialAdMod.class')
-    relocate('gg.essential.ad', essentialAdPackage)
-    filesMatching('gg/essential/ad/mixins.json') {
-        filter { it.replace('gg.essential.ad', essentialAdPackage) }
+    exclude('mcmod.info', 'META-INF/mods.toml', 'gg/essential/partnermod/EssentialPartnerMod.class')
+    relocate('gg.essential.partnermod', essentialPartnerModPackage)
+    filesMatching('gg/essential/partnermod/mixins.json') {
+        filter { it.replace('gg.essential.partnermod', essentialPartnerModPackage) }
     }
 }
 
 tasks.jar {
-    from(relocatedEssentialAdJar.archiveFile.map { zipTree(it) })
+    from(relocatedEssentialPartnerModJar.archiveFile.map { zipTree(it) })
 }
