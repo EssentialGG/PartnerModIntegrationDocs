@@ -207,11 +207,7 @@ tasks.jar {
 
 ## Support
 
-To get support, please (TODO)
-
-If users have questions about the partner mod, please (TODO)
-
-etc.
+Open a ticket in the Essential Partner discord to get support on bundling the Essential Mod Partner Integration.
 
 ## Partner Mod Changelog
 
