@@ -128,7 +128,7 @@ val relocatedEssentialPartnerModJar by tasks.registering(com.github.jengelman.gr
     val configuration = project.configurations.detachedConfiguration(project.dependencies.create(essentialPartnerModDep))
     dependsOn(configuration)
     from({ configuration.map { zipTree(it) } })
-    exclude("mcmod.info", "META-INF/mods.toml", "gg/essential/partnermod/EssentialPartnerMod.class")
+    exclude("mcmod.info", "META-INF/mods.toml", "pack.mcmeta", "gg/essential/partnermod/EssentialPartnerMod.class")
     relocate("gg.essential.partnermod", essentialPartnerModPackage)
     filesMatching("gg/essential/partnermod/mixins.json") {
         filter { it.replace("gg.essential.partnermod", essentialPartnerModPackage) }
@@ -190,7 +190,7 @@ val relocatedEssentialPartnerModJar by tasks.registering(com.github.jengelman.gr
     val configuration = project.configurations.detachedConfiguration(project.dependencies.create(essentialPartnerModDep))
     dependsOn(configuration)
     from({ configuration.map { zipTree(it) } })
-    exclude("mcmod.info", "META-INF/mods.toml", "gg/essential/partnermod/EssentialPartnerMod.class")
+    exclude("mcmod.info", "META-INF/mods.toml", "pack.mcmeta", "gg/essential/partnermod/EssentialPartnerMod.class")
     relocate("gg.essential.partnermod", essentialPartnerModPackage)
     filesMatching("gg/essential/partnermod/mixins.json") {
         filter { it.replace("gg.essential.partnermod", essentialPartnerModPackage) }
