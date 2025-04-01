@@ -39,6 +39,7 @@ are bolded in the fourth column of this table.
 | 1.21.2            |   ✅    |   ❌   | **1.21.3**                    |
 | 1.21.3            |   ✅    |   ❌   | 1.21.3                        |
 | 1.21.4            |   ✅    |   ❌   | 1.21.4                        |
+| 1.21.5            |   ✅    |   ❌   | 1.21.5                        |
 
 ## Bundling the Partner Mod
 
