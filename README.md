@@ -110,7 +110,7 @@ tasks.jar {
         "FMLCorePlugin" to "$essentialPartnerModPackage.asm.EssentialPartnerCoreMod",
         // If your mod already has its own core mod, you can have the Essential Partner core mod chain-load it:
         "EssentialPartnerCoreModDelegate" to "com.example.mod.asm.ExampleModCoreMod",
-        // In any case case, you'll likely also want to instruct Forge to load your regular mod, otherwise it'll only
+        // In any case, you'll likely also want to instruct Forge to load your regular mod, otherwise it'll only
         // load the core mod:
         "FMLCorePluginContainsFMLMod" to "Yes",
     )
