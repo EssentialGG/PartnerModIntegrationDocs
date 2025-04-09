@@ -212,5 +212,5 @@ Open a ticket in the Essential Partner discord to get support on bundling the Es
 
 ## Partner Mod Changelog
 
-### v1.0.0 - 2025-XX-XX
+### v1.0.0 - 2025-05-09
 - Initial Release
