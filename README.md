@@ -2,10 +2,8 @@
 
 Welcome to the Essential Mod Partner Program documentation.
 
-(TODO introduction about the Partner Mod/links to wiki if appropriate)
-
 Latest Partner Integration Mod Version:
-<img alt="version badge" src="https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Frepo.essential.gg%2Fpublic%2Fgg%2Fessential%2Fad-1.12.2-forge%2Fmaven-metadata.xml">
+<img alt="version badge" src="https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Frepo.essential.gg%2Fpublic%2Fgg%2Fessential%2Fpartner-mod-integration-1.12.2-forge%2Fmaven-metadata.xml">
 
 Refer to the [changelog](#ad-mod-changelog) for changes.
 
