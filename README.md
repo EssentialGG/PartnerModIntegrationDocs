@@ -1,6 +1,10 @@
 # Essential Mod Partner Program Documentation
 
-Welcome to the Essential Mod Partner Program documentation.
+Welcome to the Essential Mod Partner Program documentation. If you would like to learn more or join this program,
+click [here](https://essential.gg/wiki/partner-program).
+
+This repository contains the documentation and examples for the Partner Mod Integration. The source code of the
+integration can be found [here](https://github.com/EssentialGG/EssentialPartnerMod).
 
 Latest Partner Integration Mod Version:
 <img alt="version badge" src="https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Frepo.essential.gg%2Fpublic%2Fgg%2Fessential%2Fpartner-mod-integration-1.12.2-forge%2Fmaven-metadata.xml">
@@ -207,6 +211,7 @@ tasks.jar {
 ## Support
 
 Open a ticket in the Essential Partner discord to get support on bundling the Essential Mod Partner Integration.
+If you are not currently a partner and are interested in becoming one, learn more [here](https://essential.gg/wiki/partner-program).
 
 ## Partner Mod Changelog
 
