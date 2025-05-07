@@ -10,7 +10,7 @@ pluginManagement {
 }
 
 
-rootProject.name = "mod-partner-docs"
+rootProject.name = "PartnerModIntegrationDocs"
 
 include(":examples:1.8.9-forge")
 include(":examples:1.12.2-forge")
