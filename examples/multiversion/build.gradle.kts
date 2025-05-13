@@ -1,3 +1,5 @@
+import gg.essential.gradle.util.noServerRunConfigs
+
 plugins {
     id("gg.essential.defaults")
     id("gg.essential.multi-version")
@@ -6,7 +8,9 @@ plugins {
     id("com.gradleup.shadow") version "8.3.5" apply false
 }
 
-val essentialPartnerModDep = "gg.essential:partner-mod-integration-$platform:1.0.0"
+loom.noServerRunConfigs()
+
+val essentialPartnerModDep = "gg.essential:partner-mod-integration-$platform:1.0.1"
 
 if (platform.isFabric) {
     dependencies {
@@ -44,7 +48,7 @@ if (platform.isFabric) {
         val configuration = project.configurations.detachedConfiguration(project.dependencies.create(essentialPartnerModDep))
         dependsOn(configuration)
         from({ configuration.map { zipTree(it) } })
-        exclude("mcmod.info", "META-INF/mods.toml", "pack.mcmeta", "gg/essential/partnermod/EssentialPartnerMod.class")
+        exclude("mcmod.info", "META-INF/mods.toml", "META-INF/neoforge.mods.toml", "pack.mcmeta", "gg/essential/partnermod/EssentialPartnerMod.class")
         relocate("gg.essential.partnermod", essentialPartnerModPackage)
         filesMatching("gg/essential/partnermod/mixins.json") {
             filter { it.replace("gg.essential.partnermod", essentialPartnerModPackage) }
@@ -53,6 +57,18 @@ if (platform.isFabric) {
 
     tasks.jar {
         from(relocatedEssentialPartnerModJar.map { it.archiveFile }.map { zipTree(it) })
+    }
+
+    tasks.processResources {
+        if (platform.isNeoForge) {
+            if (platform.mcVersion < 12005) {
+                // NeoForge still uses the old mods.toml name until 1.20.5
+                filesMatching("META-INF/neoforge.mods.toml") {
+                    name = "mods.toml"
+                }
+            }
+            exclude("META-INF/mods.toml")
+        }
     }
 }
 

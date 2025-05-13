@@ -19,7 +19,7 @@ tasks.jar {
     )
 }
 
-var essentialPartnerModDep = 'gg.essential:partner-mod-integration-1.16.5-forge:1.0.0'
+var essentialPartnerModDep = 'gg.essential:partner-mod-integration-1.16.5-forge:1.0.1'
 
 tasks.register('relocatedEssentialPartnerModJar', com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar) {
     destinationDirectory.set(layout.buildDirectory.dir('devlibs'))
@@ -28,7 +28,7 @@ tasks.register('relocatedEssentialPartnerModJar', com.github.jengelman.gradle.pl
     var configuration = project.configurations.detachedConfiguration(project.dependencies.create(essentialPartnerModDep))
     dependsOn(configuration)
     from({ configuration.collect { zipTree(it) } })
-    exclude('mcmod.info', 'META-INF/mods.toml', 'pack.mcmeta', 'gg/essential/partnermod/EssentialPartnerMod.class')
+    exclude('mcmod.info', 'META-INF/mods.toml', 'META-INF/neoforge.mods.toml', 'pack.mcmeta', 'gg/essential/partnermod/EssentialPartnerMod.class')
     relocate('gg.essential.partnermod', essentialPartnerModPackage)
     filesMatching('gg/essential/partnermod/mixins.json') {
         filter { it.replace('gg.essential.partnermod', essentialPartnerModPackage) }

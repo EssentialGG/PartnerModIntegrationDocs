@@ -2,11 +2,13 @@ package com.example.mod;
 
 //#if FABRIC
 //$$ import net.fabricmc.api.ClientModInitializer;
+//#elseif NEOFORGE
+//$$ import net.neoforged.fml.common.Mod;
 //#else
 import net.minecraftforge.fml.common.Mod;
 //#endif
 
-//#if FORGE
+//#if FORGELIKE
 //#if MC>=11600
 //$$ @Mod("examplemod")
 //#else

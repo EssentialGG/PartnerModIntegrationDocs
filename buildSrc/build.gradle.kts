@@ -8,6 +8,7 @@ repositories {
 }
 
 dependencies {
-    implementation("gg.essential:essential-gradle-toolkit:0.6.5")
+    implementation("gg.essential:essential-gradle-toolkit:0.6.7")
+    implementation("gg.essential:architectury-loom:1.7.30")
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.23")
 }
