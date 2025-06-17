@@ -42,6 +42,7 @@ are bolded in the fourth column of this table.
 | 1.21.3            |   ✅    |   ✅   |    ✅     | 1.21.3                        |
 | 1.21.4            |   ✅    |   ✅   |    ✅     | 1.21.4                        |
 | 1.21.5            |   ✅    |   ✅   |    ✅     | 1.21.5                        |
+| 1.21.6            |   ✅    |   ❌   |    ❌     | 1.21.6                        |
 
 ## Bundling the Partner Mod
 
@@ -210,6 +211,9 @@ tasks.jar {
 </details>
 
 ## Partner Mod Integration Changelog
+
+### v1.0.2 - 2025-06-17
+- Added support for Fabric on Minecraft 1.21.6
 
 ### v1.0.1 - 2025-05-12
 - Added support for Forge on Minecraft 1.20.6, 1.21, 1.21.3, 1.21.4, and 1.21.5

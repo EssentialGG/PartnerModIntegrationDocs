@@ -37,3 +37,7 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Loom ###
+examples/*/run
+examples/multiversion/versions/*/run

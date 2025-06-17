@@ -23,7 +23,7 @@ tasks.jar {
     )
 }
 
-var essentialPartnerModDep = 'gg.essential:partner-mod-integration-1.8.9-forge:1.0.1'
+var essentialPartnerModDep = 'gg.essential:partner-mod-integration-1.8.9-forge:1.0.2'
 
 tasks.register('relocatedEssentialPartnerModJar', com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar) {
     destinationDirectory.set(layout.buildDirectory.dir('devlibs'))
