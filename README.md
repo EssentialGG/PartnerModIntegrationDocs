@@ -1,7 +1,7 @@
 # Essential Mod Partner Program Documentation
 
 Welcome to the Essential Mod Partner Program documentation. If you would like to learn more or join this program,
-click [here](https://essential.gg/wiki/partner-program).
+click [here](https://essential.gg/wiki/supporting-mod-creators).
 
 This repository contains the documentation and examples for the Partner Mod Integration. The source code of the
 integration can be found [here](https://github.com/EssentialGG/PartnerModIntegration).
