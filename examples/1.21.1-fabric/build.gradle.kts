@@ -14,5 +14,5 @@ repositories {
 }
 
 dependencies {
-    include("gg.essential:partner-mod-integration-1.21.1-fabric:1.0.2")
+    include("gg.essential:partner-mod-integration-1.21.1-fabric:1.0.3")
 }

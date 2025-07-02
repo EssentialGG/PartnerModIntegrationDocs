@@ -23,7 +23,7 @@ tasks.jar {
     )
 }
 
-val essentialPartnerModDep = "gg.essential:partner-mod-integration-1.12.2-forge:1.0.2"
+val essentialPartnerModDep = "gg.essential:partner-mod-integration-1.12.2-forge:1.0.3"
 
 val relocatedEssentialPartnerModJar by tasks.registering(com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar::class) {
     destinationDirectory.set(layout.buildDirectory.dir("devlibs"))
